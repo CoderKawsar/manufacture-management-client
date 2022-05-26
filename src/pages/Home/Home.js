@@ -1,9 +1,15 @@
 import React from "react";
+import Banner from "./Banner";
+import BusinessSummary from "./BusinessSummary";
+import "./Home.css";
+import Tools from "./Tools";
 
 const Home = () => {
   return (
     <div>
-      <h1>Home</h1>
+      <Banner />
+      <Tools />
+      <BusinessSummary />
     </div>
   );
 };
