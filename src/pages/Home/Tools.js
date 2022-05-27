@@ -3,7 +3,7 @@ import useTools from "../../hooks/useTools";
 import Tool from "./Tool";
 
 const Tools = () => {
-  const [tools] = useTools();
+  const [tools] = useTools(6);
   return (
     <div className="my-16 w-11/12 mx-auto">
       <h3 className="text-5xl font-bold text-center mb-12">Tools</h3>

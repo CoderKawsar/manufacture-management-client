@@ -19,7 +19,7 @@ const BusinessSummary = () => {
           </div>
           <div className="stat-title">Total Customers</div>
           <div className="stat-value text-primary">
-            <CountUp end={100} />+
+            <CountUp start={0} duration={1.5} end={100} />+
           </div>
           <div className="stat-desc">21% more than last month</div>
         </div>
@@ -30,7 +30,7 @@ const BusinessSummary = () => {
           </div>
           <div className="stat-title">Annual Revenue</div>
           <div className="stat-value text-secondary">
-            <CountUp end={5} />M
+            <CountUp start={0} duration={1.2} end={5} />M
           </div>
         </div>
 
@@ -40,7 +40,7 @@ const BusinessSummary = () => {
           </div>
           <div className="stat-title">Reviews</div>
           <div className="stat-value text-primary">
-            <CountUp end={12} />
+            <CountUp start={0} duration={1.5} end={12} />
             K+
           </div>
         </div>
@@ -51,7 +51,7 @@ const BusinessSummary = () => {
           </div>
           <div className="stat-title">Tools</div>
           <div className="stat-value text-secondary">
-            <CountUp end={250} />+
+            <CountUp start={0} duration={1.5} end={250} />+
           </div>
         </div>
       </div>

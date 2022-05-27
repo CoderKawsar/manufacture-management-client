@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const useTools = () => {
+const useTools = (total) => {
   const [tools, setTools] = useState([]);
+  const url = `http://localhost:5000/tools?total=${total}`;
 
   useEffect(() => {
-    axios.get("tools.json").then((res) => {
+    axios.get(url).then((res) => {
       const toolsData = res.data;
       setTools(toolsData);
     });
-  }, []);
+  }, [url]);
   return [tools, setTools];
 };
 
