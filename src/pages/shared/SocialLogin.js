@@ -54,9 +54,7 @@ const SocialLogin = () => {
           <img className="w-8 h-8 mr-2" src={githubIcon} alt="Github" />
           <p className="font-semibold">Sign in with Github</p>
         </div>
-        {errorMessage && (
-          <p className="text-red-400 text-center">{errorMessage}</p>
-        )}
+        {errorMessage && <p className="text-red text-center">{errorMessage}</p>}
       </div>
     </div>
   );

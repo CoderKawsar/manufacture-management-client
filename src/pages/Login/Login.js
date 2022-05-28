@@ -56,7 +56,11 @@ const Login = () => {
             className="input input-bordered"
           />
         </div>
-        <input type="submit" value="Login" className="btn btn-primary mt-4" />
+        <input
+          type="submit"
+          value="Login"
+          className="btn bg-siteColor border-0 px-6 mt-4"
+        />
         {errorMessage && <p className="text-red mt-2">{errorMessage}</p>}
       </form>
       <SocialLogin />

@@ -1,6 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Tools from "./Tools";
 
 const Tool = ({ tool }) => {
+  const gotoLink = `/tools/${tool._id}`;
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <figure>
@@ -21,7 +24,9 @@ const Tool = ({ tool }) => {
           {tool.min_order_quantity}
         </p>
         <div className="card-actions justify-start mt-4">
-          <button className="btn bg-siteColor border-0">Book Now</button>
+          <Link to={gotoLink} className="btn bg-siteColor border-0">
+            Book Now
+          </Link>
         </div>
       </div>
     </div>
