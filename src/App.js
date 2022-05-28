@@ -1,11 +1,12 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import Dashboard from "./pages/Dashboard/Dashboard";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
-import Purchase from "./pages/Purchase/Purchase";
 import Register from "./pages/Register/Register";
 import FooterArea from "./pages/shared/FooterArea";
 import Navbar from "./pages/shared/Navbar";
+import ProtectedRoute from "./pages/shared/ProtectedRoute";
 
 function App() {
   return (
@@ -13,7 +14,14 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/purchase" element={<Purchase />} />
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>

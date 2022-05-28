@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 
 const FooterArea = () => {
   return (
-    <div className="footer-top bg-[#333333] text-white mt-16">
+    <div className="footer-top bg-[#333333] text-white">
       <div className="grid grid-cols-1 md:grid-cols-4 px-12 py-16 gap-8">
         <div>
-          <h4 className="font-semibold mb-8 uppercase">CONTACT INFO</h4>
+          <h4 className="font-semibold mb-8 uppercase text-[#efefef]">
+            CONTACT INFO
+          </h4>
           <p className="text-[#666] mb-2 uppercase">STORE LOCATION</p>
           <address className="text-[#b0b0b0]">
             85 Lake View Drive Marshfield, New York, 54449
@@ -15,7 +17,9 @@ const FooterArea = () => {
           <p className="text-[#b0b0b0]">demo@demo.com</p>
         </div>
         <div>
-          <h4 className="font-semibold mb-8 uppercase">Useful links</h4>
+          <h4 className="font-semibold mb-8 uppercase text-[#efefef]">
+            Useful links
+          </h4>
           <Link className="text-[#b0b0b0] block mb-2" to="/">
             Legal & Privacy
           </Link>
@@ -36,7 +40,9 @@ const FooterArea = () => {
           </Link>
         </div>
         <div>
-          <h4 className="font-semibold mb-8 uppercase">My Account</h4>
+          <h4 className="font-semibold mb-8 uppercase text-[#efefef]">
+            My Account
+          </h4>
           <Link className="text-[#b0b0b0] block mb-2" to="/">
             My Profile
           </Link>
@@ -54,7 +60,9 @@ const FooterArea = () => {
           </Link>
         </div>
         <div>
-          <h4 className="font-semibold mb-8 uppercase">Company</h4>
+          <h4 className="font-semibold mb-8 uppercase text-[#efefef]">
+            Company
+          </h4>
           <Link className="text-[#b0b0b0] block mb-2" to="/">
             About Us
           </Link>

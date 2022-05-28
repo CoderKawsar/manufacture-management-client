@@ -21,7 +21,7 @@ const Tool = ({ tool }) => {
           {tool.min_order_quantity}
         </p>
         <div className="card-actions justify-start mt-4">
-          <button className="btn btn-primary">Book Now</button>
+          <button className="btn bg-siteColor border-0">Book Now</button>
         </div>
       </div>
     </div>

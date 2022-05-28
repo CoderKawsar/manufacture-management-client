@@ -1,7 +1,11 @@
+import { signOut } from "firebase/auth";
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+import auth from "../../firebase.config";
 
 const Navbar = () => {
+  const [user, loading, error] = useAuthState(auth);
   return (
     <div className="navbar bg-base-100 flex justify-between">
       <div className="navbar-start">
@@ -30,29 +34,40 @@ const Navbar = () => {
               <Link to="/">Purchase</Link>
             </li>
             <li>
-              <Link to="login">Login</Link>
+              <Link to="/login">Login</Link>
             </li>
             <li>
-              <Link to="register">Register</Link>
+              <Link to="/register">Register</Link>
             </li>
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost normal-case text-xl">
           daisyUI
         </Link>
-        <Link to="/purchase">Purchase</Link>
+        <Link to="/dashboard">Dashboard</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
           <li>
             <Link to="/">Purchase</Link>
           </li>
-          <li>
-            <Link to="/login">Login</Link>
-          </li>
-          <li>
-            <Link to="/register">Register</Link>
-          </li>
+          {user && (
+            <>
+              <li onClick={() => signOut(auth)}>
+                <Link to="/login">Logout</Link>
+              </li>
+            </>
+          )}
+          {!user && (
+            <>
+              <li>
+                <Link to="/login">Login</Link>
+              </li>
+              <li>
+                <Link to="/register">Register</Link>
+              </li>
+            </>
+          )}
         </ul>
       </div>
     </div>
