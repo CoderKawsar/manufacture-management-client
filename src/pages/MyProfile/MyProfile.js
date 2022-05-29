@@ -35,7 +35,7 @@ const MyProfile = () => {
   };
   return (
     <div>
-      <img src={user?.photoURL} alt="" />
+      <img className="mx-auto rounded-full" src={user?.photoURL} alt="" />
       <h5 className="text-center font-semibold text-3xl">
         {user?.displayName}
       </h5>
