@@ -54,7 +54,10 @@ const Navbar = () => {
           {user && (
             <>
               <li onClick={() => signOut(auth)}>
-                <Link to="/login">Logout</Link>
+                <Link to="/login" className="gap-0">
+                  <span className="text-siteColor">({user.displayName})</span>
+                  Logout
+                </Link>
               </li>
             </>
           )}

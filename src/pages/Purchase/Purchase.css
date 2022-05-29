@@ -1,0 +1,8 @@
+.purchase img {
+  height: 150px;
+  width: 180px;
+}
+
+.purchase .card-actions {
+  display: none;
+}

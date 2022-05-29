@@ -1,5 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
@@ -37,6 +39,7 @@ function App() {
         <Route path="/register" element={<Register />} />
       </Routes>
       <FooterArea />
+      <ToastContainer />
     </>
   );
 }
