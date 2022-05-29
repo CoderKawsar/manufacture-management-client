@@ -49,6 +49,7 @@ const Purchase = () => {
     const phone = event.target.phone.value;
     const address = event.target.address.value;
     const productId = tool?._id;
+    const uid = user.uid;
     const purchase_quantity = event.target.purchase_quantity.value;
     const service = {
       name,
@@ -56,6 +57,7 @@ const Purchase = () => {
       phone,
       address,
       productId,
+      uid,
       purchase_quantity,
     };
     axios.post("http://localhost:5000/orders", service);

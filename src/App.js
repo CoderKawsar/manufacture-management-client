@@ -11,6 +11,9 @@ import FooterArea from "./pages/shared/FooterArea";
 import Navbar from "./pages/shared/Navbar";
 import ProtectedRoute from "./pages/shared/ProtectedRoute";
 import Tools from "./pages/Tools/Tools";
+import MyOrders from "./pages/MyOrders/MyOrders";
+import AddReview from "./pages/AddReview/AddReview";
+import MyProfile from "./pages/MyProfile/MyProfile";
 
 function App() {
   return (
@@ -31,10 +34,14 @@ function App() {
           path="/dashboard"
           element={
             <ProtectedRoute>
-              <Dashboard />
+              <Dashboard></Dashboard>
             </ProtectedRoute>
           }
-        />
+        >
+          <Route path="my-orders" element={<MyOrders></MyOrders>}></Route>
+          <Route path="add-review" element={<AddReview></AddReview>}></Route>
+          <Route path="my-profile" element={<MyProfile></MyProfile>}></Route>
+        </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>

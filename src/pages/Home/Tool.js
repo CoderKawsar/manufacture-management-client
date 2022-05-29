@@ -12,8 +12,8 @@ const Tool = ({ tool }) => {
       <div className="card-body">
         <h2 className="card-title">{tool.name}</h2>
         <p>
-          <span className="font-bold">Details: </span>If a dog chews shoes whose
-          shoes does he choose?
+          <span className="font-bold">Details: </span>
+          {tool?.description}
         </p>
         <p>
           <span className="font-bold">Available Quantity: </span>
