@@ -13,6 +13,13 @@ const SingleUser = ({ singleUser }) => {
       </div>
     );
   }
+
+  const makeAdmin = () => {
+    fetch(`http://localhost:5000/user/admin/${user.uid}`, {
+      method: "PUT",
+    }).then((res) => res.json());
+  };
+
   return (
     <tr key={singleUser._id}>
       <td>
@@ -34,7 +41,9 @@ const SingleUser = ({ singleUser }) => {
         <span className="badge badge-ghost badge-sm">{phone}</span>
       </td>
       <td>
-        <button class="btn btn-xs">Make Admin</button>
+        <button className="btn btn-xs" onClick={makeAdmin}>
+          Make Admin
+        </button>
       </td>
     </tr>
   );

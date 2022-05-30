@@ -3,17 +3,13 @@ import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { toast } from "react-toastify";
 import auth from "../../firebase.config";
+import useUser from "../../hooks/useUser";
 
 const MyProfile = () => {
+  const [userData] = useUser();
   const [user, loading, error] = useAuthState(auth);
-  const [userData, setUserData] = useState({});
 
-  const url = `http://localhost:5000/user/${user?.uid}`;
-  useEffect(() => {
-    axios.get(url).then((res) => {
-      setUserData(res.data);
-    });
-  }, [url]);
+  const url = `http://localhost:5000/user/${userData?.uid}`;
 
   const handleUpdateProfile = (event) => {
     event.preventDefault();
@@ -23,7 +19,7 @@ const MyProfile = () => {
     const linkedinProfileLink = event.target.linkedinProfileLink.value;
 
     const updatedData = {
-      uid: user.uid,
+      uid: user?.uid,
       name: user?.displayName,
       email: user?.email,
       photoURL: user?.photoURL,
@@ -34,7 +30,7 @@ const MyProfile = () => {
     };
     axios.put(url, updatedData);
     event.target.reset();
-    toast("Profile Updated");
+    toast.success("Profile Updated");
   };
   return (
     <div>
