@@ -19,6 +19,8 @@ import MakeAdmin from "./pages/MakeAdmin/MakeAdmin";
 import RequireAuth from "./pages/shared/RequireAuth";
 import RequireAdmin from "./pages/shared/RequireAdmin";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
+import Blog from "./pages/Blog/Blog";
+import MyPortfolio from "./pages/MyPortfolio/MyPortfolio";
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tools" element={<Tools />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/my-portfolio" element={<MyPortfolio />} />
         <Route
           path="/tools/:id"
           element={

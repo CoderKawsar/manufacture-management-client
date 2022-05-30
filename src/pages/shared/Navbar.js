@@ -38,9 +38,6 @@ const Navbar = () => {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <Link to="/">Purchase</Link>
-            </li>
-            <li>
               <Link to="/login">Login</Link>
             </li>
             <li>
@@ -49,14 +46,17 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost normal-case text-xl">
-          daisyUI
+          SpaceDesk Mechanical
         </Link>
         <Link to="/dashboard">Dashboard</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
           <li>
-            <Link to="/">Purchase</Link>
+            <Link to="/blog">Blog</Link>
+          </li>
+          <li>
+            <Link to="/my-portfolio">Portfolio</Link>
           </li>
           {user && (
             <>
