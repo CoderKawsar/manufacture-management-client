@@ -18,6 +18,7 @@ import AddProduct from "./pages/AddProduct/AddProduct";
 import MakeAdmin from "./pages/MakeAdmin/MakeAdmin";
 import RequireAuth from "./pages/shared/RequireAuth";
 import RequireAdmin from "./pages/shared/RequireAdmin";
+import PageNotFound from "./pages/PageNotFound/PageNotFound";
 
 function App() {
   return (
@@ -72,6 +73,7 @@ function App() {
         </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/*" element={<PageNotFound />} />
       </Routes>
       <FooterArea />
       <ToastContainer />

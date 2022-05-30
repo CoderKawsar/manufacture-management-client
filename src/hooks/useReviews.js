@@ -3,7 +3,7 @@ import axios from "axios";
 
 const useReviews = (total) => {
   const [reviews, setReviews] = useState([]);
-  const url = `http://localhost:5000/reviews?total=${total}`;
+  const url = `https://serene-dawn-73243.herokuapp.com/reviews?total=${total}`;
 
   useEffect(() => {
     axios.get(url).then((res) => {

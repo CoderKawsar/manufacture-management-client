@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 const ManageOrders = () => {
   const [orders, setOrders] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:5000/orders/").then((res) => {
+    axios.get("https://serene-dawn-73243.herokuapp.com/orders/").then((res) => {
       const ordersData = res.data;
       setOrders(ordersData);
     });

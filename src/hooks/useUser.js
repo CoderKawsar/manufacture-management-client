@@ -7,7 +7,7 @@ const useUser = () => {
   const [user, loading, error] = useAuthState(auth);
   const [userData, setUserData] = useState({});
 
-  const url = `http://localhost:5000/user/${user?.uid}`;
+  const url = `https://serene-dawn-73243.herokuapp.com/user/${user?.uid}`;
   useEffect(() => {
     axios.get(url).then((res) => {
       setUserData(res.data);

@@ -5,7 +5,7 @@ const MyOrder = ({ order }) => {
   const { _id, productId, purchase_quantity, address } = order;
   const [tool, setTool] = useState({});
 
-  const url = `http://localhost:5000/tools/${productId}`;
+  const url = `https://serene-dawn-73243.herokuapp.com/tools/${productId}`;
   useEffect(() => {
     axios.get(url).then((res) => {
       const toolData = res.data;
@@ -14,7 +14,7 @@ const MyOrder = ({ order }) => {
   }, [url]);
 
   const handleDelete = (id) => {
-    const delUrl = `http://localhost:5000/orders/${id}`;
+    const delUrl = `https://serene-dawn-73243.herokuapp.com/orders/${id}`;
     axios.delete(delUrl);
   };
 

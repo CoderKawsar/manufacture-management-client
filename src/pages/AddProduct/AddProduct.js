@@ -19,7 +19,7 @@ const AddProduct = () => {
       available_quantity,
       min_order_quantity,
     };
-    axios.post("http://localhost:5000/tools", product);
+    axios.post("https://serene-dawn-73243.herokuapp.com/tools", product);
     event.target.reset();
     toast.success("Product Added!");
   };

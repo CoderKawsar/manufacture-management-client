@@ -8,7 +8,11 @@ const AddReview = () => {
     event.preventDefault();
     const name = event.target.name.value;
     const review = event.target.review.value;
-    axios.post("http://localhost:5000/reviews", { name, rating, review });
+    axios.post("https://serene-dawn-73243.herokuapp.com/reviews", {
+      name,
+      rating,
+      review,
+    });
     event.target.reset();
     toast("Review Submitted!");
   };

@@ -3,7 +3,7 @@ import axios from "axios";
 
 const useTools = (total) => {
   const [tools, setTools] = useState([]);
-  const url = `http://localhost:5000/tools?total=${total}`;
+  const url = `https://serene-dawn-73243.herokuapp.com/tools?total=${total}`;
 
   useEffect(() => {
     axios.get(url).then((res) => {

@@ -13,7 +13,7 @@ const Purchase = () => {
   const [validPurchaseQuantity, setValidPurchaseQuantity] = useState(true);
   let { id } = useParams();
 
-  const url = `http://localhost:5000/tools/${id}`;
+  const url = `https://serene-dawn-73243.herokuapp.com/tools/${id}`;
   useEffect(() => {
     axios.get(url).then((res) => {
       const toolData = res.data;
@@ -60,7 +60,7 @@ const Purchase = () => {
       uid,
       purchase_quantity,
     };
-    axios.post("http://localhost:5000/orders", service);
+    axios.post("https://serene-dawn-73243.herokuapp.com/orders", service);
     event.target.reset();
     toast("Order Requested");
   };
