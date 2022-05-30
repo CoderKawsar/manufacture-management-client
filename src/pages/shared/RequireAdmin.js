@@ -1,10 +1,14 @@
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Navigate, useLocation } from "react-router-dom";
 import auth from "../../firebase.config";
+import useUser from "../../hooks/useUser";
 
-function ProtectedRoute({ children }) {
+function RequireAdmin({ children }) {
   const [user, loading, error] = useAuthState(auth);
   let location = useLocation();
+  const [userData] = useUser();
+  const admin = userData?.role === "admin";
+  console.log(admin);
 
   if (loading) {
     return (
@@ -25,4 +29,4 @@ function ProtectedRoute({ children }) {
   return children;
 }
 
-export default ProtectedRoute;
+export default RequireAdmin;

@@ -4,6 +4,7 @@ import useUser from "../../hooks/useUser";
 
 const Dashboard = () => {
   const [userData] = useUser();
+  const admin = userData?.role === "admin";
   return (
     <div className="w-11/12 mx-auto">
       <h2 className="text-5xl font-bold mt-12 text-center mb-16">Dashboard</h2>
@@ -32,17 +33,17 @@ const Dashboard = () => {
             <li>
               <Link to="my-profile">My Profile</Link>
             </li>
-            {userData?.role === "admin" && (
+            {admin && (
               <li>
                 <Link to="make-admin">Make Admin</Link>
               </li>
             )}
-            {userData?.role === "admin" && (
+            {admin && (
               <li>
                 <Link to="manage-orders">Manage Orders</Link>
               </li>
             )}
-            {userData?.role === "admin" && (
+            {admin && (
               <li>
                 <Link to="add-product">Add Product/Tool</Link>
               </li>

@@ -9,7 +9,6 @@ import Purchase from "./pages/Purchase/Purchase";
 import Register from "./pages/Register/Register";
 import FooterArea from "./pages/shared/FooterArea";
 import Navbar from "./pages/shared/Navbar";
-import ProtectedRoute from "./pages/shared/ProtectedRoute";
 import Tools from "./pages/Tools/Tools";
 import MyOrders from "./pages/MyOrders/MyOrders";
 import AddReview from "./pages/AddReview/AddReview";
@@ -17,6 +16,8 @@ import MyProfile from "./pages/MyProfile/MyProfile";
 import ManageOrders from "./pages/ManageOrders/ManageOrders";
 import AddProduct from "./pages/AddProduct/AddProduct";
 import MakeAdmin from "./pages/MakeAdmin/MakeAdmin";
+import RequireAuth from "./pages/shared/RequireAuth";
+import RequireAdmin from "./pages/shared/RequireAdmin";
 
 function App() {
   return (
@@ -28,29 +29,46 @@ function App() {
         <Route
           path="/tools/:id"
           element={
-            <ProtectedRoute>
+            <RequireAuth>
               <Purchase />
-            </ProtectedRoute>
+            </RequireAuth>
           }
         />
         <Route
           path="/dashboard"
           element={
-            <ProtectedRoute>
+            <RequireAuth>
               <Dashboard></Dashboard>
-            </ProtectedRoute>
+            </RequireAuth>
           }
         >
           <Route path="my-orders" element={<MyOrders></MyOrders>}></Route>
           <Route path="add-review" element={<AddReview></AddReview>}></Route>
           <Route path="my-profile" element={<MyProfile></MyProfile>}></Route>
-          <Route path="my-profile" element={<MyProfile></MyProfile>}></Route>
-          <Route path="make-admin" element={<MakeAdmin></MakeAdmin>}></Route>
+          <Route
+            path="make-admin"
+            element={
+              <RequireAdmin>
+                <MakeAdmin></MakeAdmin>
+              </RequireAdmin>
+            }
+          ></Route>
           <Route
             path="manage-orders"
-            element={<ManageOrders></ManageOrders>}
+            element={
+              <RequireAdmin>
+                <ManageOrders></ManageOrders>
+              </RequireAdmin>
+            }
           ></Route>
-          <Route path="add-product" element={<AddProduct></AddProduct>}></Route>
+          <Route
+            path="add-product"
+            element={
+              <RequireAdmin>
+                <AddProduct></AddProduct>
+              </RequireAdmin>
+            }
+          ></Route>
         </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
