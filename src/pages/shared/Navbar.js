@@ -6,6 +6,13 @@ import auth from "../../firebase.config";
 
 const Navbar = () => {
   const [user, loading, error] = useAuthState(auth);
+  if (loading) {
+    return (
+      <div className="h-screen flex justify-center items-center">
+        <progress className="progress w-56"></progress>
+      </div>
+    );
+  }
   return (
     <div className="navbar bg-base-100 flex justify-between">
       <div className="navbar-start">

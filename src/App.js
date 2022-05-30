@@ -14,6 +14,9 @@ import Tools from "./pages/Tools/Tools";
 import MyOrders from "./pages/MyOrders/MyOrders";
 import AddReview from "./pages/AddReview/AddReview";
 import MyProfile from "./pages/MyProfile/MyProfile";
+import ManageOrders from "./pages/ManageOrders/ManageOrders";
+import AddProduct from "./pages/AddProduct/AddProduct";
+import MakeAdmin from "./pages/MakeAdmin/MakeAdmin";
 
 function App() {
   return (
@@ -41,6 +44,13 @@ function App() {
           <Route path="my-orders" element={<MyOrders></MyOrders>}></Route>
           <Route path="add-review" element={<AddReview></AddReview>}></Route>
           <Route path="my-profile" element={<MyProfile></MyProfile>}></Route>
+          <Route path="my-profile" element={<MyProfile></MyProfile>}></Route>
+          <Route path="make-admin" element={<MakeAdmin></MakeAdmin>}></Route>
+          <Route
+            path="manage-orders"
+            element={<ManageOrders></ManageOrders>}
+          ></Route>
+          <Route path="add-product" element={<AddProduct></AddProduct>}></Route>
         </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />

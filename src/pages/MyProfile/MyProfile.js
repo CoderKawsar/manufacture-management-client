@@ -24,6 +24,9 @@ const MyProfile = () => {
 
     const updatedData = {
       uid: user.uid,
+      name: user?.displayName,
+      email: user?.email,
+      photoURL: user?.photoURL,
       education,
       location,
       phone,

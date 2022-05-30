@@ -30,6 +30,15 @@ const Dashboard = () => {
             <li>
               <Link to="my-profile">My Profile</Link>
             </li>
+            <li>
+              <Link to="make-admin">Make Admin</Link>
+            </li>
+            <li>
+              <Link to="manage-orders">Manage Orders</Link>
+            </li>
+            <li>
+              <Link to="add-product">Add Product/Tool</Link>
+            </li>
           </ul>
         </div>
       </div>
