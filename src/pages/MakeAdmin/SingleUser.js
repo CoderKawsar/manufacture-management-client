@@ -15,7 +15,7 @@ const SingleUser = ({ singleUser }) => {
   }
 
   const makeAdmin = () => {
-    fetch(`https://serene-dawn-73243.herokuapp.com/user/admin/${user.uid}`, {
+    fetch(`https://manufacture-site.onrender.com/user/admin/${user.uid}`, {
       method: "PUT",
     }).then((res) => res.json());
   };

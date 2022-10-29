@@ -4,7 +4,7 @@ import SingleUser from "./SingleUser";
 
 const MakeAdmin = () => {
   const { data: users, isLoading } = useQuery("users", () =>
-    fetch("https://serene-dawn-73243.herokuapp.com/users", {
+    fetch("https://manufacture-site.onrender.com/users", {
       method: "GET",
     }).then((res) => res.json())
   );

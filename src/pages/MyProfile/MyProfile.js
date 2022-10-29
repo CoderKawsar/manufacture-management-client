@@ -9,7 +9,7 @@ const MyProfile = () => {
   const [userData] = useUser();
   const [user, loading, error] = useAuthState(auth);
 
-  const url = `https://serene-dawn-73243.herokuapp.com/user/${userData?.uid}`;
+  const url = `https://manufacture-site.onrender.com/user/${userData?.uid}`;
 
   const handleUpdateProfile = (event) => {
     event.preventDefault();

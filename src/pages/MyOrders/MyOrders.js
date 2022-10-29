@@ -8,7 +8,7 @@ const MyOrders = () => {
   const [orders, setOrders] = useState([]);
   const [user, loading, error] = useAuthState(auth);
 
-  const orderUrl = `https://serene-dawn-73243.herokuapp.com/orders/${user.uid}`;
+  const orderUrl = `https://manufacture-site.onrender.com/orders/${user.uid}`;
   useEffect(() => {
     axios.get(orderUrl).then((res) => {
       const ordersData = res.data;

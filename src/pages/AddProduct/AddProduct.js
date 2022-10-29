@@ -19,7 +19,7 @@ const AddProduct = () => {
       available_quantity,
       min_order_quantity,
     };
-    axios.post("https://serene-dawn-73243.herokuapp.com/tools", product);
+    axios.post("https://manufacture-site.onrender.com/tools", product);
     event.target.reset();
     toast.success("Product Added!");
   };

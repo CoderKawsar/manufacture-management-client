@@ -8,7 +8,7 @@ const AddReview = () => {
     event.preventDefault();
     const name = event.target.name.value;
     const review = event.target.review.value;
-    axios.post("https://serene-dawn-73243.herokuapp.com/reviews", {
+    axios.post("https://manufacture-site.onrender.com/reviews", {
       name,
       rating,
       review,
